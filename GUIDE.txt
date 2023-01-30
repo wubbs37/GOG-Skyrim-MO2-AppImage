@@ -1,14 +1,31 @@
+#All the info is there I just don't feel like continuing to making it pretty right now
 
-Put installer gog exes and bins in ~/BuildRoot/rom
-Put icon in png format of your choice in ~/BuildRoot/rom
-Extract the contents of mo2.7z into ~/BuildRoot/addons     -     https://github.com/ModOrganizer2/modorganizer/releases 
-Extract the contents of SKSE64.7z into ~/BuildRoot/addons      -     https://skse.silverlock.org/ 
-Put "Profile Activator.bat" into ~/BuildRoot/addons      -      Found at bottom of this document
-Make sure mo2 and skse aren't in subdirectories of /addons/ - skse64_loader.exe and modorganizer.exe should be in /addons/, all other file structure down should be the same. It will look messy, I apologize to the OCD.
-Put gameimage.AppImage into ~/BuildRoot
-Open terminal - following command assumes you renamed the the gameimage appimage to gi.AppImage
+|=========================================================================================================================================================|
+|                                                                           PREP                                                                          |
+|=========================================================================================================================================================|
+|                                                                                                                                                         |
+| Put installer gog exes and bins in ~/BuildRoot/rom                                                                                                      |
+|                                                                                                                                                         |
+| Put icon in png format of your choice in ~/BuildRoot/rom                                                                                                |
+|                                                                                                                                                         |
+| Extract the contents of mo2.7z into ~/BuildRoot/addons     -     https://github.com/ModOrganizer2/modorganizer/releases                                 |
+|                                                                                                                                                         |
+| Extract the contents of SKSE64.7z into ~/BuildRoot/addons      -     https://skse.silverlock.org/                                                       |
+|                                                                                                                                                         |
+| Put "Profile Activator.bat" into ~/BuildRoot/addons      -      https://github.com/wubbs37/GOG-Skyrim-MO2-AppImage/blob/main/Profile%20Activator.bat    |
+|                                                                                                                                                         |
+| Make sure mo2 and skse aren't in subdirectories of /addons/ - skse64_loader.exe and modorganizer.exe should be in /addons/, all other file structure    | 
+| down should be the same. It will look messy, I apologize to the OCD.                                                                                    |
+|                                                                                                                                                         |  |                                                                                                                                                         |
+| Put gameimage.AppImage into ~/BuildRoot                                                                                                                 |
+|                                                                                                                                                         |
+| Open terminal - following command assumes you renamed the the gameimage appimage to gi.AppImage                                                         |
+|=========================================================================================================================================================|
+|                                                                   Terminal Stuff                                                                        |
+|=========================================================================================================================================================|
+
 $ ./gi.AppImage --platform=wine --name="Whatever" ==dir=./
-Run through the initial setup until you get to config
+Run through the initial setup until you get to config - use 64 bit wine option
 $ winetricks cmd
 let it finish
 $ winetricks vcrun2015
@@ -32,11 +49,14 @@ DO NOT TEST MODORGANIZER
 No more Software testing
 ModOrganizer.exe is the main executable
 
-Build
+==========================================================================================================================================================
+If you try to test the AppRun file, it won't work. Don't worry about that. It's normal
+Build :)
 
-====================================================================================================================
+==========================================================================================================================================================
 
-USAGE AFTER BUILD
+                                                    USAGE AFTER BUILD
+
 If the AppImage's .config folder doesn't exist or doesn't contain setup info from a previous boot, MO2 will ask you to create a new instance. 
 Use a global profile, and C:\users\*your username*\Documents\My Games\Skyrim Special Edition GOG\MO2 as the base directory for the profile.
 Using that path is importance if you want Profile Activator.bat to work out of the box without editing it.
@@ -51,16 +71,16 @@ It works well enough on windows or normal wine installations. We can't do that h
     You can have multiple profiles, but whichever you're going to use must be named "Active"
     Run Profile Activator.bat from the mo2 dropdown anytime you make any changes to your list or swap lists - it will copy .ini and .txt files from profiles/Active/ to the correct directory in the AppImage's .config folder.
 
-======================================================================================================================
+==========================================================================================================================================================
 
 
-#Profile Activator.bat
+Profile Activator.bat
 
 xcopy "C:\users\%USERNAME%\Documents\My Games\Skyrim Special Edition GOG\MO2\Profiles\Active\*.txt" "C:\users\%USERNAME%\AppData\Local\Skyrim Special Edition GOG\" /exclude:saves /s /y /i
 xcopy "C:\users\%USERNAME%\Documents\My Games\Skyrim Special Edition GOG\MO2\Profiles\Active\*.ini" "C:\users\%USERNAME%\AppData\Local\Skyrim Special Edition GOG\" /exclude:saves /s /y /i 
 
-#
-=======================================================================================================================
+
+===========================================================================================================================================================
 
 Disclaimer 1: I'm only using this for personal archival purposes, and you should too.
 Disclaimer 2: Depending on possible mis-steps you take, the .config folder the appimage generates may contain the username of the linux profile that originally generated the appimage. Considering disclaimer 1, it shouldn't matter much, but you've been warned just in case.
