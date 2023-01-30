@@ -8,3 +8,11 @@ If you substitute a 32 bit wineprefix and use the correct winetricks for that ga
 Or really most games mo2 can handle.
 
 Just about any non steam game if you skip the mo2 stuff (which wouldn't require editing the AppRun File)
+
+
+
+DEPENDENCIES:
+AppImage Support
+p7zip - build only (I think)
+wine - build and run
+wine-mono - build and run
