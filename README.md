@@ -12,7 +12,11 @@ Just about any non steam game if you skip the mo2 stuff (which wouldn't require 
 
 
 DEPENDENCIES:
+
 AppImage Support
+
 p7zip - build only (I think)
+
 wine - build and run
+
 wine-mono - build and run
