@@ -10,6 +10,8 @@
 |                                                                                                                                                         |
 | Extract the contents of SKSE64.7z into ~/BuildRoot/addons      -     https://skse.silverlock.org/                                                       |
 |                                                                                                                                                         |
+| Replace dll to gog version :                      - https://www.nexusmods.com/skyrimspecialedition/mods/6194?tab=files&file_id=322391                   |
+|                                                                                                                                                         |
 | Put "Profile Activator.bat" into ~/BuildRoot/addons      -      https://github.com/wubbs37/GOG-Skyrim-MO2-AppImage/blob/main/Profile%20Activator.bat    |
 |                                                                                                                                                         |
 | Make sure mo2 and skse aren't in subdirectories of /addons/ - skse64_loader.exe and modorganizer.exe should be in /addons/, all other file structure    | 
@@ -64,35 +66,8 @@
 | If the AppImage's .config folder doesn't exist or doesn't contain setup info from a previous boot, MO2 will ask you to create a new instance.           |
 |                                                                                                                                                         |
 | Use a global profile, and C:\users\*your username*\Documents\My Games\Skyrim Special Edition GOG\MO2 as the base directory for the profile.             |
-| Using that path is important if you want Profile Activator.bat to work out of the box without editing it.                                               |
 | C:\users\*your username*\Documents in wine is the same folder as ~/Documents - you can find all your mo2 folders in                                     |
 | ~/Documents/My Games/Skyrim Special Edition GOG/MO2                                                                                                     |
-|                                                                                                                                                         |
-| MO2 just can't get itself working correctly with GOG Skyrim even on windows in one way - it "mounts" its plugins.txt etc to %AppData%\Skyrim Special    |
-| Edition instead of %AppData%\Skyrim Special Edition GOG\                                                                                                |
-| regardless of operating system of if steam has ever even been installed. My normal workaround to this on with a "normal" usecase would to be to set the |
-| profiles folder to %AppData%\Local and just naming my profile Skyrim Special Edition GOG                                                                |
-| It works well enough on windows or normal wine installations. We can't do that here though.                                                             |
-|                                                                                                                                                         |
-|    Create a profile called "Active" (Caps matters)                                                                                                      |
-|    Add an executable to the mo2 dropdown - Profile Activator.bat in C:\Skyrim                                                                           |
-|                                                                                                                                                         |
-|    You can have multiple profiles, but whichever you're going to use must be named "Active"                                                             |
-|                                                                                                                                                         |
-|    Run Profile Activator.bat from the mo2 dropdown anytime you make any changes to your list or swap lists - it will copy .ini and .txt files from      |
-|    profiles/Active/ to the correct directory in the AppImage's .config folder.                                                                          |
-|                                                                                                                                                         |
-|=========================================================================================================================================================|
-|                                                                                                                                                         |
-|                                                                                                                                                         |
-| Profile Activator.bat                                                                                                                                   |
-|                                                                                                                                                         |
-| xcopy "C:\users\%USERNAME%\Documents\My Games\Skyrim Special Edition GOG\MO2\Profiles\Active\*.txt" "C:\users\%USERNAME%\AppData\Local\Skyrim Special   |
-| Edition GOG\" /exclude:saves /s /y /i                                                                                                                   |
-|                                                                                                                                                         |
-| xcopy "C:\users\%USERNAME%\Documents\My Games\Skyrim Special Edition GOG\MO2\Profiles\Active\*.ini" "C:\users\%USERNAME%\AppData\Local\Skyrim Special   |
-| Edition GOG\" /exclude:saves /s /y /i                                                                                                                   |
-|                                                                                                                                                         |
 |                                                                                                                                                         |
 |=========================================================================================================================================================|
 |                                                                                                                                                         |
@@ -100,7 +75,4 @@
 |                                                                                                                                                         |
 | Disclaimer 2: Depending on possible mis-steps you take, the .config folder the appimage generates may contain the username of the linux profile that    |
 | originally generated the appimage. Considering disclaimer 1, it shouldn't matter much, but you've been warned just in case.                             |
-|                                                                                                                                                         |
-| Disclaimer 3: You can basically follow this guide for Morrowwind, Oblvion, NVSE, and FO3, just skip the "Profile Activator.bat" steps, they're only     |
-| needed for Skyrim.                                                                                                                                      |
-|==========================================================================================================================================================
+|=========================================================================================================================================================|
