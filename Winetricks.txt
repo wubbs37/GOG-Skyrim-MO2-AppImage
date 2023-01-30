@@ -1,0 +1,17 @@
+Winetricks Needed to get X up and running
+
+1. Skyrim AE GOG
+    vcrun2015
+    xact_x64
+    
+    (recommended)
+    cmd
+  
+  2. Oblivion GOG
+    d3dx9
+    dotnet20
+    vcrun2005
+    vcrun2008
+    xact
+    
+  
