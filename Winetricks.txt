@@ -16,44 +16,44 @@ Winetricks Needed to get X up and running
         vcrun2008
         xact
     
-  3.Morrowwind
+  3.Morrowwind GOG
         
       d3dx9
       dotnet20
       vcrun2005
       vcrun2008
         
-  4. Fallout 3
+  4. Fallout 3 GOG
        
        d3dx9
        dotnet20
        vcrun2008
        xact
         
-  5. Fallout New Vegas
+  5. Fallout New Vegas GOG
         dxd39
         dotnet20
         vcrun2008
         xact
   
-  6. Cyberpunk 2077
+  6. Cyberpunk 2077 GOG
   
         d3dx9
         dxvk
         vcrun2019
   
-  7. Kingdom Come: Deliverance
+  7. Kingdom Come: Deliverance GOG
   
         d3dx9
         vcrun2015
             
-  8. Tale of Two Wastelands
+  8. Tale of Two Wastelands (GOG)
   
         d3dx9
         dotnet20
         vcrun2008
         xact
-  9. Dragon Age: Origins
+  9. Dragon Age: Origins GOG
         
         d3dx9
         vcrun2008
