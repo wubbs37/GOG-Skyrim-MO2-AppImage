@@ -3,11 +3,9 @@ A guide to making an AppIamge of the GOG Version of Skyrim AE with MO2 support. 
 
 Skip the few steps repated to "Profile Activator.bat" for anything other than Skyrim GOG.
 
-If you substitute a 32 bit wineprefix and use the correct winetricks for that game, you should be able to follow this guide for FO3/FONV/Morrowwind/Oblivion
+Should work for most games mo2 can handle.
 
-Or really most games mo2 can handle.
-
-Just about any non steam game if you skip the mo2 stuff (which wouldn't require editing the AppRun File)
+Just about any non steam game if you skip the mo2 stuff
 
 
 
