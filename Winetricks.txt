@@ -1,17 +1,70 @@
 Winetricks Needed to get X up and running
 
 1. Skyrim AE GOG
-    vcrun2015
-    xact_x64
+        
+        cmd
+        vcrun2015
+        xact_x64
+
+#######################################UNTESTED BELOW################################  
+
+   2. Oblivion GOG
+        
+        d3dx9
+        dotnet20
+        vcrun2005
+        vcrun2008
+        xact
     
-    (recommended)
-    cmd
+  3.Morrowwind
+        
+      d3dx9
+      dotnet20
+      vcrun2005
+      vcrun2008
+        
+  4. Fallout 3
+       
+       d3dx9
+       dotnet20
+       vcrun2008
+       xact
+        
+  5. Fallout New Vegas
+        dxd39
+        dotnet20
+        vcrun2008
+        xact
   
-  2. Oblivion GOG
-    d3dx9
-    dotnet20
-    vcrun2005
-    vcrun2008
-    xact
-    
+  6. Cyberpunk 2077
   
+        d3dx9
+        dxvk
+        vcrun2019
+  
+  7. Kingdom Come: Deliverance
+  
+        d3dx9
+        vcrun2015
+            
+  8. Tale of Two Wastelands
+  
+        d3dx9
+        dotnet20
+        vcrun2008
+        xact
+  9. Dragon Age: Origins
+        
+        d3dx9
+        vcrun2008
+        xact
+
+
+
+
+
+
+
+
+
+
